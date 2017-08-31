@@ -1,0 +1,30 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<groupId>your-groupId</groupId>
+<artifactId>your-artifactId</artifactId>
+<version>your-version</version>
+<distributionManagement>
+    <repository>
+        <id>mavenrepo</id>
+        <name>MavenRepo</name>
+        <url>git:release://git@bitbucket.org:damandeepsingh93/mavenrepo.git</url>
+            <!--<url>git:master://git@bitbucket.org:myCompany/meta/mavenrepo.git</url> This is an Example-->
+    </repository>
+</distributionManagement>
+<build>
+  <extensions>
+    <extension>
+        <groupId>ar.com.synergian</groupId>
+        <artifactId>wagon-git</artifactId>
+        <version>0.2.5</version><!-- you might need to check for a new version -->
+    </extension>
+  </extensions>
+</build>
+
+<pluginRepositories>
+  <pluginRepository>
+    <id>synergian-repo</id>
+    <url>https://raw.github.com/synergian/wagon-git/releases</url>
+  </pluginRepository>
+</pluginRepositories>
+</project>
